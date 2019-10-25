@@ -1,8 +1,2 @@
-<h1>Events</h1>
-<%# access the instance var @time%>
-Listing generated at <%=@time %>
-<ul>
-  <li>BugSmash</li>
-  <li>Hackthon</li>
-  <li>Kata Camp</li>
-</ul>
+<h1><%= @events.size%> Events</h1>
+<%= @events%>

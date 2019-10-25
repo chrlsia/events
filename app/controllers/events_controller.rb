@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
     # create an instance var in order to pass data to view
-    @time = Time.now
+    @events = ['BugSmash','Hackthon','Kata Camp']
   end
 end
