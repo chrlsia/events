@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # we want /events to match the controller - action pair
+  # which is events#index
+  get "/events" => "events#index"
 end
