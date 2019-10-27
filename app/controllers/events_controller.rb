@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    # create an instance var in order to pass data to view
-    @events = ['BugSmash','Hackthon','Kata Camp','Rails User Group']
+    # get all the events
+    @events = Event.all
   end
 end
