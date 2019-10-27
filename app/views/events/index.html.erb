@@ -1,6 +1,10 @@
 <h1><%= @events.size%> Events</h1>
 <ul>
   <% @events.each do |event|%>
-    <li><%=event.name%></li>
+    <li>
+      <strong> <%=event.name%></strong>
+      in <%= event.location%>:
+      <%= event.price%>
+    </li>
   <%end%>
 </ul>
