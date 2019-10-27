@@ -4,7 +4,7 @@
     <li>
       <strong> <%=event.name%></strong>
       in <%= event.location%>:
-      <%= event.price%>
+      <%= number_to_currency(event.price)%>
     </li>
   <%end%>
 </ul>
