@@ -5,6 +5,7 @@ class EventsController < ApplicationController
   end
 
   def show
+    fail
     @event = Event.find(1)
   end
   
