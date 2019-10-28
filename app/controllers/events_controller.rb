@@ -5,8 +5,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    fail
-    @event = Event.find(1)
+    @event = Event.find(params[:id])
   end
   
 end
