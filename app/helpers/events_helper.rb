@@ -1,9 +1,9 @@
 module EventsHelper
   def format_price(event)
-    if event.price ==0
+    if event.free?
       "Free"
     else
-      numbet_to_currency(event.price)
+      number_to_currency(event.price)
     end
   end
 end
