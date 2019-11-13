@@ -12,7 +12,8 @@
     <%= @event.location %>
   </p>
   <h3>Price:</h3>
+  <%#TODO helper : format_price(@event) %>
   <p><%= format_price(@event)%></p>
 </article>
 <%= link_to "All Events", events_path %> |
-<%= link_to "Edit", event_edit_path(@event)%>
+<%= link_to "Edit", edit_event_path(@event)%>

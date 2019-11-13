@@ -2,10 +2,12 @@
 <%= form_for(@event) do |f|%>
   <p>
     <%= f.label :name %> <br/>
+    <%#TODO f.text_field%>
     <%= f.text_field :name %>
   </p>
   <p>
     <%= f.label :description %> <br/>
+    <%#TODO f.text_area%>
     <%= f.text_area :description, cols: 40, rows:7 %>
   </p>
   <p>
@@ -14,6 +16,7 @@
   </p>
   <p>
     <%= f.label :price %> <br/>
+    <%#TODO f.number_field%>
     <%= f.number_field :price %>
   </p>
   <p>
