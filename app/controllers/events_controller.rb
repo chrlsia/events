@@ -22,4 +22,8 @@ class EventsController < ApplicationController
     redirect_to @event #rails knows where to redirect cause @event is the current object
   end
 
+  def new
+    @event=Event.new
+  end
+
 end
