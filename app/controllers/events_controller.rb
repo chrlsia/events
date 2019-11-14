@@ -14,8 +14,6 @@ class EventsController < ApplicationController
   
   def update
     @event= Event.find(params[:id])
-    event_params = params.require(:event).
-      permit(:name,:description,:location,:price,:starts_at)
     @event.update(event_params)
     # render 'show'  render show template,not good
     # redirect_to event_path(@event) very good or better
@@ -27,8 +25,6 @@ class EventsController < ApplicationController
   end
 
   def create
-    event_params = params.require(:event).
-            permit(:name,:description,:location,:price,:starts_at)
     @event=Event.new(event_params)
     # So far we have the event in @event
     # Time to save it in the database
@@ -36,5 +32,13 @@ class EventsController < ApplicationController
     # show the thing we just created
     redirect_to @event
   end
+
+  private
+
+  def event_params
+    params.require(:event).
+            permit(:name,:description,:location,:price,:starts_at)
+  end
+
 
 end
