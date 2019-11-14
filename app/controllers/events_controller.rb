@@ -26,4 +26,13 @@ class EventsController < ApplicationController
     @event=Event.new
   end
 
+  def create
+    @event=Event.new(params[:event])
+    # So far we have the event in @event
+    # Time to save it in the database
+    @event.save
+    # show the thing we just created
+    redirect_to @event
+  end
+
 end
