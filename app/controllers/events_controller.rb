@@ -27,7 +27,9 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event=Event.new(params[:event])
+    event_params = params.require(:event).
+            permit(:name,:description,:location,:price,:starts_at)
+    @event=Event.new(event_params)
     # So far we have the event in @event
     # Time to save it in the database
     @event.save
