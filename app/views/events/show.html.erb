@@ -1,5 +1,6 @@
 <article>
   <header>
+    <%= image_for(@event) %>
     <h1><%= @event.name%></h1>
   </header>
   <p>
@@ -14,6 +15,9 @@
   <h3>Price:</h3>
   <%#TODO helper : format_price(@event) %>
   <p><%= format_price(@event)%></p>
+  <p>
+    <%= pluralize(@event.capacity,'spot') %>
+  </p>
 </article>
 <%= link_to "All Events", events_path %> |
 <%= link_to "Edit", edit_event_path(@event)%> |
