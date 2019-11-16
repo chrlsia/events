@@ -8,7 +8,7 @@ class Event < ApplicationRecord
   def self.upcoming
     # no need to specify Event.where(...)
     # cause Event is the class name and it implicity is meant
-    where('starts_at>=?',Time.now).order("starts_at")
+    where('starts_at>=?',10.years.ago).order("starts_at")
   end
 
 end
