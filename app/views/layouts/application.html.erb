@@ -4,12 +4,32 @@
     <title>Events</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+
+    <header style="color: #F0F0F0; background:#237CBE;">
+      <h1>Real studio</h1>
+    </header>
+    <aside style="background:#F0F0F0;width:200px;float:right;">
+      <nav>
+        <ul>
+          <li>
+            <%= link_to 'All Events', events_path %>
+          </li>
+          <li>
+            <%= link_to 'Add New Event', new_event_path %>
+          </li>
+        </ul>
+      </nav>
+    
+    </aside>
     <%= yield %>
+   <footer style="backround: #F0F0F0; color:#237CBE;">
+      <p>
+        Copyright &copy; 2019 The DoIt Company
+      </p>
+   </footer>
   </body>
 </html>
